@@ -1,6 +1,6 @@
 # Custom MySQL Docker image
 
-This image is based on the official [mysql](https://registry.hub.docker.com/_/mysql/) image (version 5.6 only for now). The mysqld configuration will be generated from ENV variables beginning with `MYSQLD_` which must be given on `docker run`.
+This image is based on the official [mysql](https://registry.hub.docker.com/_/mysql/) image. The mysqld configuration will be generated from ENV variables beginning with `MYSQLD_` which must be given on `docker run`.
 
 ## General use
 
@@ -21,3 +21,7 @@ Example:
     CA_CERT=$(cat -E CA.crt | xargs)
 
     docker run -e SERVER_KEY=$SERVER_KEY -e SERVER_CERT=$SERVER_CERT -e CA_CERT=$CA_CERT schoolscout/custom-mysql-with-ssl:5.6
+
+## Supported versions
+
+The image is currently available with MySQL 5.5 and 5.6. Just use the tag corresponding to the version.

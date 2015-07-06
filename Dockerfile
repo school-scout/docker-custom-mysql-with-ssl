@@ -1,4 +1,4 @@
-FROM mysql:5.6
+FROM mysql:5.5
 
 COPY custom-entrypoint.sh /custom-entrypoint.sh
 
